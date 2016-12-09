@@ -1,6 +1,16 @@
-<%= simple_form_for @item do |f| %>
-    <%= f.input :title, label: "Item", class: "form-control"%>
-    <%= f.input :description, class: "form-control"%>
-    <%= f.button :submit, class: "btn btn-primary"%>
+<div class="form-horizontal">
+  <div class="row">
+    <div class="col-md-8">
 
-<% end %>
+    <%= simple_form_for @item do |f| %>
+      <%= f.text_field :title, label: "Item", class: "form-control"%>
+      <%= f.text_field :description, class: "form-control"%>
+      <%= f.button :submit, class: "btn btn-primary"%>
+
+    <% end %>
+    </div>
+
+  </div>
+</div>
+
+
