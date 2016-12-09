@@ -41,12 +41,24 @@ body {
 	height: 100%;
 	background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
 
-	.container {
-		width: 50%;
-		max-width: 750px;
-		background: $white_opaque;
-	}
 }
+
+.container-nav{
+	width: 85%;
+	max-width: 750px;
+	margin: auto;
+
+}
+.container {
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
+	background: $white_opaque;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+
+}
+
 
 .clearfix:before,
 .clearfix:after {
@@ -83,7 +95,7 @@ a {
 .navbar-default {
 
 	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 8px;
 	background-color: #fff;
 
 	.navbar-nav > li > a {
