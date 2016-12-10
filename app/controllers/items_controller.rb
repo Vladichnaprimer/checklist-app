@@ -14,11 +14,14 @@ class ItemsController < ApplicationController
 
   def create
     @item = current_user.items.build(items_params)
-    if @item.save
+
+     if @item.save
+      flash[:success] = "Item was created successfully!"
       redirect_to root_path
-    else
-      render 'new'
-    end
+     else
+       render action: "new"
+     end
+
   end
 
   def show
@@ -30,6 +33,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(items_params)
+      flash[:success] = "Item was updated successfully!"
       redirect_to items_path(@item)
     else
       render 'edit'
@@ -38,7 +42,9 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to root_path
+    flash[:success] = "Item was deleted successfully!"
+    redirect_to  root_path
+
   end
 
   def complete
