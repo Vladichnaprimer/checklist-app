@@ -28,8 +28,6 @@
 
 /* Universal styles */
 
-notice {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
-.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
 
 * {
 	box-sizing: border-box;
@@ -40,7 +38,6 @@ html {
 
 body {
 	font-family: 'Merriweather', serif;
-	//height: 100%;
 	background: linear-gradient(to right, #4CB8C4 45%, #EAECC6 100%);
 
 }
@@ -96,8 +93,8 @@ a {
 
 .navbar-default {
 
-	padding-top: 5px;
-	padding-bottom: 8px;
+	padding-top: 8px;
+	padding-bottom: 10px;
 	background-color: #fff;
 
 	.navbar-nav > li > a {
@@ -109,9 +106,10 @@ a {
 	}
 
 	.navbar-brand {
+		padding-top: 20px;
 		color: #222;
-		letter-spacing: 5px;
-		font-size: 20px;
+		letter-spacing: 10px;
+		font-size: 28px;
 	}
 
 }

@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
 
+
   </head>
 
   <body>
@@ -19,15 +20,26 @@
   			</div>
   			<ul class="nav navbar-nav">
   				<% if current_user.present? %>
-            <li><%= link_to "New Item", new_item_path %></li>
+            <li><%= link_to  new_item_path do %>
+                <i class="fa fa-pencil fa-2x" aria-hidden="true">  </i>
+            <%end%>
+            </li>
 
   				<% else %>
-            <li><%= link_to "Sign Up", new_user_registration_path %></li>
-  					<li><%= link_to "Log In", new_user_session_path %></li>
+            <li><%= link_to new_user_registration_path do %>
+                <i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i>
+            <%end%>
+            </li>
+  					<li><%= link_to  new_user_session_path do %>
+                <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
+            <%end%>
+          </li>
   				<% end %>
   			</ul>
   			<% if user_signed_in? %>
-  				<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "navbar-text navbar-link navbar-right" %>
+  				<%= link_to  destroy_user_session_path, method: :delete, class: "navbar-text navbar-link navbar-right" do %>
+            <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+          <%end%>
   			<% end %>
   		</div>
   	</nav>
